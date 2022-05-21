@@ -28,3 +28,4 @@ quochuy.on('name', () => {
 })
 
 quochuy.emit('name')
+
