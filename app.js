@@ -1,5 +1,3 @@
-const tutorial = require('./tutorial')
-console.log(tutorial)
-console.log(tutorial.PI)
-console.log(tutorial.sum(1, 2))
-console.log(new tutorial.SomeMathObject())
+const _ = require('lodash')
+let example = _.fill([1,2,3,4,5],'banana',1,4)
+console.log(example)
