@@ -16,5 +16,8 @@
     "url": "https://github.com/vuhuy172dh/nodejs_tutor/issues"
   },
   "homepage": "https://github.com/vuhuy172dh/nodejs_tutor#readme",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
