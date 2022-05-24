@@ -18,6 +18,8 @@
   "homepage": "https://github.com/vuhuy172dh/nodejs_tutor#readme",
   "keywords": [],
   "dependencies": {
+    "express": "^4.18.1",
     "lodash": "^4.17.21"
-  }
+  },
+  "devDependencies": {}
 }
