@@ -4,7 +4,7 @@
     <title>Page Title</title>
 </head>
 <body>
-    <form action="/" method="POST">
+    <form action="/" method="POST" id="form">
         <div>
             <label>Email address:</label>
             <input type="email" name="email">
@@ -15,5 +15,23 @@
         </div>
         <button type="submit">Submit</button>
     </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() =>{
+            $('#form').submit((e) => {
+                e.preventDefault();
+                $.ajax({
+                    url: '/',
+                    type: 'post',
+                    contentType: 'application/json',
+                    data: JSON.stringify($('#form').serializeArray()), 
+                    success: (response) => {
+                        console.log('successfully got response')
+                        console.log(response)
+                    }
+                })
+            })
+        });
+    </script>
 </body>
 </html>

@@ -7,6 +7,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'static','index.html'))
 })
 app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 
 
 app.get('/example', (req,res) => {
@@ -22,7 +23,7 @@ app.get('/example/:name/:age', (req, res) => {
 app.post('/', (req,res) => {
     console.log(req.body)
     //database work here
-    res.send('successfully request')
+    res.json({success: true})
 })
 
 app.listen(3000)
