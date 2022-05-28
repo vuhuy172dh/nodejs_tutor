@@ -1,9 +1,19 @@
-const http = require('http')
-const fs = require('fs')
+const express = require('express')
+const path = require('path')
+const app = express()
+app.use('/public',express.static(path.join(__dirname,'static')))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname,'static','index.html'))
+})
 
-//create a folder static contains files.
-http.createServer((req, res) => {
-    const readStream = fs.createReadStream('./static/example.json')
-    res.writeHead(200,{'Content-type': 'text/html'})
-    readStream.pipe(res)
-}).listen(3000)
+app.get('/example', (req,res) => {
+    res.send('hitting example route')
+})
+
+app.get('/example/:name/:age', (req, res) => {
+    console.log(req.params)
+    console.log(req.query)
+    res.send('example with route params')
+})
+
+app.listen(3000)
