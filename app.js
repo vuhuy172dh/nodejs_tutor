@@ -1,8 +1,5 @@
-const express = require('express')
-const app = express()
-
-app.get('/',(req, res) => {
-    res.send('hello world')
-})
-
-app.listen(3000)
+const tutorial = require('./tutorial')
+console.log(tutorial)
+console.log(tutorial.PI)
+console.log(tutorial.sum(1, 2))
+console.log(new tutorial.SomeMathObject())
