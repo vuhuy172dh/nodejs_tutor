@@ -1,20 +1,23 @@
-const fs = require('fs')
-// const readStream = fs.createReadStream('./example.txt','utf-8')
-// const writeStream = fs.createWriteStream('example2.txt')
+//create a simple
+// const http = require('http')
+// const server = http.createServer((req, res) => {
+//     res.write('Hello World from nodejs')
+//     res.end()
+// })
 
-//write file
-// readStream.pipe(writeStream)
+// server.listen(3000)
 
-//compress file
-const zlib = require('zlib')
-// const gzip = zlib.createGzip()
+const http = require('http')
+const server = http.createServer((req, res) => {
+    if(req.url === '/')
+    {
+        res.write('Hello world from nodejs')
+        res.end()
+    }
+    else{
+        res.write('using another domain')
+        res.end()
+    }
+})
 
-// const readStream = fs.createReadStream('./example.txt', 'utf-8')
-// const writeStream = fs.createWriteStream('compressed.zip')
-// readStream.pipe(gzip).pipe(writeStream)
-
-//uncompress file
-const gunzip = zlib.createGunzip()
-const readStream = fs.createReadStream('./compressed.zip')
-const writeStream = fs.createWriteStream('uncompressed.txt')
-readStream.pipe(gunzip).pipe(writeStream)
+server.listen(3000)
