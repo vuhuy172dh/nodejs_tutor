@@ -1,0 +1,25 @@
+{
+  "name": "nodejs_tutor",
+  "version": "1.0.0",
+  "description": "tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuhuy172dh/nodejs_tutor.git"
+  },
+  "author": "vu huy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vuhuy172dh/nodejs_tutor/issues"
+  },
+  "homepage": "https://github.com/vuhuy172dh/nodejs_tutor#readme",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.18.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {}
+}
